@@ -22,7 +22,7 @@ module.exports = {
         ],
         'arrow-parens': ['error', 'as-needed'],
         'no-unused-vars': [
-            'error',
+            process.env.NODE_ENV === 'production' ? 'err' : 'warn',
             {
                 vars: 'all',
                 args: 'after-used',
